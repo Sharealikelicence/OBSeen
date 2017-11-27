@@ -1,3 +1,58 @@
-<p>
-  todo-list-new works!
-</p>
+<form>
+  <div class="form-group">
+    <label for="inputTitle">TODO List Title</label>
+    <input #inputTitle type="text" class="form-control" id="inputTitle" placeholder="List Title" (keyup)="onKey(inputTitle.id, inputTitle.value)">
+  </div>
+  <div class="form-group">
+    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#propertiesCollapse" aria-expanded="false"
+      aria-controls="propertiesCollapse">
+      Properties
+    </button>
+    <div class="panel-collapse collapse" id="propertiesCollapse">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <div class="form-group">
+              <label for="inputDescription">Description</label>
+              <input #inputDescription type="text" class="form-control" id="inputDescription" placeholder="Description" (keyup)="onKey(inputDescription.id, inputDescription.value)">
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="form-group">
+            <label>Categories</label>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="form-group">
+            <label>Start</label>
+            <owl-date-time [locale]="en"></owl-date-time>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="form-group">
+            <label>End</label>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="form-group">
+            <label>Reoccuring</label>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="form-group">
+            <label>Priority</label>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="form-group">
+            <label>People</label>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="form-group">
+            <label>Notes</label>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</form>

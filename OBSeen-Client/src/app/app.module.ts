@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
 
+import { DateTimePickerModule } from "ng-pick-datetime";
 
 import { AppComponent } from './app.component';
 import { AgendaListComponent } from './components/agenda/agenda-list/agenda-list.component';
@@ -38,7 +40,9 @@ const appRoutes: Routes = [
       appRoutes //,
       //{ enableTracing: true } // Used for debugging only
     ),
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    DateTimePickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
