@@ -9,50 +9,34 @@
       Properties
     </button>
     <div class="panel-collapse collapse" id="propertiesCollapse">
-      <ul class="list-group">
-        <li class="list-group-item">
-          <div class="form-group">
-              <label for="inputDescription">Description</label>
-              <input #inputDescription type="text" class="form-control" id="inputDescription" placeholder="Description" (keyup)="onKey(inputDescription.id, inputDescription.value)">
-          </div>
-        </li>
-        <li class="list-group-item">
-          <div class="form-group">
-            <label>Categories</label>
-          </div>
-        </li>
-        <li class="list-group-item">
-          <div class="form-group">
-            <label>Start</label>
-            <owl-date-time [locale]="en"></owl-date-time>
-          </div>
-        </li>
-        <li class="list-group-item">
-          <div class="form-group">
-            <label>End</label>
-          </div>
-        </li>
-        <li class="list-group-item">
-          <div class="form-group">
-            <label>Reoccuring</label>
-          </div>
-        </li>
-        <li class="list-group-item">
-          <div class="form-group">
-            <label>Priority</label>
-          </div>
-        </li>
-        <li class="list-group-item">
-          <div class="form-group">
-            <label>People</label>
-          </div>
-        </li>
-        <li class="list-group-item">
-          <div class="form-group">
-            <label>Notes</label>
-          </div>
-        </li>
-      </ul>
+      <div class="card card-body">
+        <div class="form-group">
+          <label for="inputDescription">Description</label>
+          <input #inputDescription type="text" class="form-control" id="inputDescription" placeholder="Description" (keyup)="onKey(inputDescription.id, inputDescription.value)">
+        </div>
+        <div class="form-group">
+          <label>Categories</label>
+        </div>
+        <div class="form-group">
+          <label>Start</label>
+          <owl-date-time [locale]="en"></owl-date-time>
+        </div>
+        <div class="form-group">
+          <label>End</label>
+        </div>
+        <div class="form-group">
+          <label>Reoccuring</label>
+        </div>
+        <div class="form-group">
+          <label>Priority</label>
+        </div>
+        <div class="form-group">
+          <label>People</label>
+        </div>
+        <div class="form-group">
+          <label>Notes</label>
+        </div>
+      </div>
     </div>
   </div>
 </form>
