@@ -6,7 +6,9 @@ export class TodoItem {
     public Title: string;
     public Description: string;
     public Categories: TodoCategory[];
+    public StartDate: any;
     public DueDate: any;
+    public OngoingPeriod: any;
     public Priority: number;
     public People: Person[];
     public MetaLinks: any[]; // used for hyperlinks, images, etc.
