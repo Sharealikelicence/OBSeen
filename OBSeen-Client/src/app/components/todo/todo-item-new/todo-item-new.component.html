@@ -3,24 +3,6 @@
     <label for="inputTitle">TODO List Title</label>
     <input #inputTitle type="text" class="form-control" id="inputTitle" placeholder="List Title" (keyup)="onKey(inputTitle.id, inputTitle.value)">
   </div>
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        TODO ITEMS
-      </mat-panel-title>
-      <mat-panel-description>
-        Add todo items here
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <mat-list>
-      <mat-list-item *ngFor="let todoItem of todoList.ItemList">
-        {{todoItem.Title}}
-      </mat-list-item>
-    </mat-list>
-    <button>
-      <img src="{{iconURL}}plus.svg" alt="plus">
-    </button>
-  </mat-expansion-panel>
   <div class="form-group">
     <mat-expansion-panel>
       <mat-expansion-panel-header>
@@ -63,8 +45,8 @@
           </mat-panel-description>
         </mat-expansion-panel-header>
         <mat-form-field>
-          <input matInput [matDatepicker]="myDatepicker" placeholder="Start Date">
-          <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+          <input matInput [matDatepicker]="startDatepicker" placeholder="Start Date">
+          <mat-datepicker-toggle matSuffix [for]="startDatepicker"></mat-datepicker-toggle>
           <mat-datepicker #myDatepicker></mat-datepicker>
         </mat-form-field>
       </mat-expansion-panel>
@@ -77,7 +59,11 @@
             Date and time the list is valid from
           </mat-panel-description>
         </mat-expansion-panel-header>
-        CONTENT
+        <mat-form-field>
+          <input matInput [matDatepicker]="endDatepicker" placeholder="Start Date">
+          <mat-datepicker-toggle matSuffix [for]="endDatepicker"></mat-datepicker-toggle>
+          <mat-datepicker #myDatepicker></mat-datepicker>
+        </mat-form-field>
       </mat-expansion-panel>
       <mat-expansion-panel>
         <mat-expansion-panel-header>

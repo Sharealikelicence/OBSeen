@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { AgendaDetailComponent } from './components/agenda/agenda-detail/agenda-detail.component';
 import { TodoListDetailComponent } from './components/todo/todo-list-detail/todo-list-detail.component';
 import { HomeComponent } from './components/home/home.component';
+import { TodoItemNewComponent } from './components/todo/todo-item-new/todo-item-new.component';
 
 const appRoutes: Routes = [
   { path: 'TodoList', component: TodoListDetailComponent },
@@ -24,6 +25,8 @@ const appRoutes: Routes = [
   { path: '**', component: PageNotFoundComponent }
 ];
 
+export const ICON_URL: string = '/node_modules/open-iconic/svg/';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +36,8 @@ const appRoutes: Routes = [
     PageNotFoundComponent,
     AgendaDetailComponent,
     TodoListDetailComponent,
-    HomeComponent
+    HomeComponent,
+    TodoItemNewComponent
   ],
   imports: [
     RouterModule.forRoot(
