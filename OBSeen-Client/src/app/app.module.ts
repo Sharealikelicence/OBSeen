@@ -34,14 +34,12 @@ const appRoutes: Routes = [
     HomeComponent
   ],
   imports: [
-    NgbModule.forRoot(),
     RouterModule.forRoot(
       appRoutes //,
       //{ enableTracing: true } // Used for debugging only
     ),
     BrowserModule,
-    BrowserAnimationsModule,
-    DateTimePickerModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
