@@ -4,38 +4,107 @@
     <input #inputTitle type="text" class="form-control" id="inputTitle" placeholder="List Title" (keyup)="onKey(inputTitle.id, inputTitle.value)">
   </div>
   <div class="form-group">
-    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#propertiesCollapse" aria-expanded="false"
-      aria-controls="propertiesCollapse">
-      Properties
-    </button>
-    <div class="panel-collapse collapse" id="propertiesCollapse">
-      <div class="card card-body">
-        <div class="form-group">
-          <label for="inputDescription">Description</label>
-          <input #inputDescription type="text" class="form-control" id="inputDescription" placeholder="Description" (keyup)="onKey(inputDescription.id, inputDescription.value)">
-        </div>
-        <div class="form-group">
-          <label>Categories</label>
-        </div>
-        <div class="form-group">
-          <label>Start</label>
-        </div>
-        <div class="form-group">
-          <label>End</label>
-        </div>
-        <div class="form-group">
-          <label>Reoccuring</label>
-        </div>
-        <div class="form-group">
-          <label>Priority</label>
-        </div>
-        <div class="form-group">
-          <label>People</label>
-        </div>
-        <div class="form-group">
-          <label>Notes</label>
-        </div>
-      </div>
-    </div>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Properties
+        </mat-panel-title>
+        <mat-panel-description>
+          Edit extra properties for this List
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Description
+          </mat-panel-title>
+          <mat-panel-description>
+            List description
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        CONTENT
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Categories
+          </mat-panel-title>
+          <mat-panel-description>
+            List Categories
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        CONTENT
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Start
+          </mat-panel-title>
+          <mat-panel-description>
+            Date and time the list is valid from
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-form-field>
+          <input matInput [matDatepicker]="myDatepicker" placeholder="Start Date">
+          <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+          <mat-datepicker #myDatepicker></mat-datepicker>
+        </mat-form-field>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            End
+          </mat-panel-title>
+          <mat-panel-description>
+            Date and time the list is valid from
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        CONTENT
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Reoccuring
+          </mat-panel-title>
+          <mat-panel-description>
+            Set this as a reoccuring task
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        CONTENT
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Priority
+          </mat-panel-title>
+          <mat-panel-description>
+            Task list priority
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        CONTENT
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            People
+          </mat-panel-title>
+          <mat-panel-description>
+            People assigned to this todo list
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        CONTENT
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Notes
+          </mat-panel-title>
+          <mat-panel-description>
+            Extra Notes
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        CONTENT
+      </mat-expansion-panel>
+    </mat-expansion-panel>
   </div>
 </form>

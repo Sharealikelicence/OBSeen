@@ -3,6 +3,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
 
+import { MaterialModule } from './material/material.module'
+
 import { AppComponent } from './app.component';
 import { AgendaListComponent } from './components/agenda/agenda-list/agenda-list.component';
 import { TodoListNewComponent } from './components/todo/todo-list-new/todo-list-new.component';
@@ -39,7 +41,8 @@ const appRoutes: Routes = [
       //{ enableTracing: true } // Used for debugging only
     ),
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
