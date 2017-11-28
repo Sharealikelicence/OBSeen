@@ -3,8 +3,6 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
 
-import { DateTimePickerModule } from "ng-pick-datetime";
-
 import { AppComponent } from './app.component';
 import { AgendaListComponent } from './components/agenda/agenda-list/agenda-list.component';
 import { TodoListNewComponent } from './components/todo/todo-list-new/todo-list-new.component';
@@ -36,6 +34,7 @@ const appRoutes: Routes = [
     HomeComponent
   ],
   imports: [
+    NgbModule.forRoot(),
     RouterModule.forRoot(
       appRoutes //,
       //{ enableTracing: true } // Used for debugging only
